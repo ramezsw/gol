@@ -7,7 +7,7 @@ pipeline{
 	       stage('build'){
 	        steps{
                 bat 'mvn clean install'
-                }
+                
 		       stage('deploy'){
 			       steps{
 				       bat 'sc stop Tomcat7'
@@ -17,5 +17,4 @@ pipeline{
 			       }
                }
 	}
-}
 }
